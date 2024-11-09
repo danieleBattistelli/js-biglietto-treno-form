@@ -13,30 +13,76 @@
 </head>
 
 <body>
-    <section>
-        <form action="" id="user-form">
-            <div class="row m-3">
-                <div class="col-6">
-                    <div class="col">
-                        <label class="form-label" for="age">inserisci la tua Età</label>
-                        <input required class="form-control" type="number" id="age" name="age">
-                    </div>
-                    <div class="col">
-                        <label class="form-label" for="distance">inserisci il numero di Km</label>
-                        <input required class="form-control" type="number" id="distance" name="distance">
-                    </div>
+    <div class="container-sm">
+        <h1 class="text-white text-center mb-3 mt-5">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+        <div class="card text-bg-light mb-3" style="max-width: 100rem;">
+            <div class="card-body">
+                <form action="" id="user-form">
+                    <div class="row align-items-end">
+                        <div class="col-4 text-center text-danger">
+                            <label class="mt-3 form-label" for="username">Nome e congnome</label>
+                            <input required minlength="2" class="form-control" type="text" id="username" name="username"
+                                autocomplete="off" />
+                        </div>
 
-                    <button class="btn btn-primary mt-3" id="submit-btn" type="submit">
-                        Conferma
-                    </button>
-                    <button class="btn btn-danger mt-3" id="reset-btn" type="reset">
-                        Resetta
-                    </button>
-                </div>
+                        <div class="col-4 text-center text-danger">
+                            <label class="form-label" for="age">inserisci la tua Età</label>
+                            <input required class="form-control" type="number" id="age" name="age">
+                        </div>
+
+                        <div class="col-4 text-center text-danger">
+                            <label class="form-label" for="distance">inserisci il numero di Km</label>
+                            <input required class="form-control" type="number" id="distance" name="distance">
+                        </div>
+
+                        <div class="text-center mt-4">
+                            <button class="btn btn-primary mt-3" id="submit-btn" type="submit">
+                                Genera
+                            </button class="col align-item-center">
+                            <button class="btn btn-danger mt-3" id="reset-btn" type="reset">
+                                Annulla
+                            </button>
+                        </div>
+                </form>
             </div>
-        </form>
+        </div>
 
-    </section>
+
+    </div>
+    <div class="container-sm">
+        <h1 class="text-white text-center mb-1 mt-5">IL TUO BIGLIETTO</h1>
+        <div class="card text-bg-light mb-3" style="max-width: 100rem;">
+            <div class="card-body">
+                <h3>DETTAGLIO PASSEGGERI</h3>
+                <hr>
+                <div class="row">
+                    <div class="col-3 bg-info">
+                        <h6>NOME PASSEGGERO</h6>
+                        <p class="" id="username-card"> jon Snow</p>
+                    </div>
+                    <div class="col-2">
+                        <h6>Offerta</h6>
+                        <p id="discount-card">Biglietto standard</p>
+                    </div>
+                    <div class="col-2">
+                        <h6>Carrozza</h6>
+                        <p class="" id="carriage-card">5</p>
+                    </div>
+                    <div class="col-2">
+                        <h6>Codice CP</h6>
+                        <p id="code-card">92911</p>
+                    </div>
+                    <div class="col-3">
+                        <h6>Costo Biglietto</h6>
+                        <p id="ticket-price-card">2.10€</p>
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </div>
+
+
+    </div>
 
     <script src="./js/script.js"></script>
 </body>
